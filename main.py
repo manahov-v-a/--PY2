@@ -12,16 +12,16 @@ class Parallelogram:
         :param line_one: Сторона один
         :param line_two: Сторона два
         :param angle: Угол между сторонами один и два, в градусах
-        :param square: Площадь параллелограмма
-        :param perimeter: Периметр Параллелограмма
+        :param square_value: Площадь параллелограмма
+        :param perimeter_value: Периметр Параллелограмма
 
         Примеры:
         >>> parallelogram = Parallelogram(1,2,3)
         """
         self.line_one = None
         self.line_two = None
-        self.square = None
-        self.perimeter = None
+        self.square_value = None
+        self.perimeter_value = None
         self.__init_line_one(line_one)
         self.__init_line_two(line_two)
         self.angle = None
@@ -89,7 +89,8 @@ class Parallelogram:
         2.0
 
         """
-        return self.line_one * self.line_two * math.sin(self.angle)
+        self.square_value = self.line_one * self.line_two * math.sin(self.angle)
+        return self.square_value
 
     def perimeter(self) -> Union[int, float]:
         """
@@ -100,7 +101,8 @@ class Parallelogram:
         >>> g.perimeter()
         6
         """
-        return 2*(self.line_one + self.line_two)
+        self.perimeter_value = 2*(self.line_one + self.line_two)
+        return self.perimeter_value
 
     def __str__(self) -> str:
         """
