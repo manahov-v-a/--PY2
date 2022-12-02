@@ -5,11 +5,11 @@ import doctest
 class Rectangle:
     def __init__(self, line_one: Union[int, float], line_two: Union[int, float]):
         """
-        Создание и подготовка к работе объекта "Параллелограмм"
+        Создание и подготовка к работе объекта "Прямоугольник"
         :param line_one: Сторона один
         :param line_two: Сторона два
-        :param square_value: Площадь параллелограмма
-        :param perimeter_value: Периметр Параллелограмма
+        :param square_value: Площадь прямоугольника
+        :param perimeter_value: Периметр прямоугольника
 
         Примеры:
         >>> rectangle = Rectangle(1,2)
@@ -42,7 +42,7 @@ class Rectangle:
     def __init_line_two(self, line_two: Union[int, float]) -> None:
         """
         Инициализирует и проверяет значение второго отрезка
-        :param line_two:
+        :param line_two: длина второго отрезока
         :return: Net
         :raise TypeError: длина выражается числом
         :raise ValueError: длина больше нуля
