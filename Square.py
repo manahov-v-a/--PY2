@@ -5,10 +5,10 @@ import doctest
 class Square:
     def __init__(self, line: Union[int, float]):
         """
-        Создание и подготовка к работе объекта "Параллелограмм"
+        Создание и подготовка к работе объекта "Квадрат"
         :param line: Сторона Квадрата
-        :param square_value: Площадь параллелограмма
-        :param perimeter_value: Периметр Параллелограмма
+        :param square_value: Площадь квадрата
+        :param perimeter_value: Периметр квадрата
 
         Примеры:
         >>> rectangle = Square(1)
