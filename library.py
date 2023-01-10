@@ -32,7 +32,7 @@ class Library:
         self.books = books
 
     def get_next_book_id(self):
-        return len(self.books) + 1
+        return self.books[-1].id_ + 1 if len(self.books) > 0 else 1
 
     def get_index_by_book_id(self, id: int):
         for i, name in enumerate(self.books):
