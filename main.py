@@ -9,6 +9,18 @@ class Book:
 
     def __repr__(self):
         return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r})"
+        
+    def get_name(self):
+        return self._name
+
+    def get_author(self):
+        return self._author
+
+    def set_name(self, name):
+        self._name = name
+
+    def set_author(self, author):
+        self._author = author
 
 
 class PaperBook(Book):
@@ -16,14 +28,17 @@ class PaperBook(Book):
         super().__init__(name, author)
         if isinstance(pages, int):
             if pages >= 0:
-                self.pages = pages
+                self._pages = pages
             else:
                 raise ValueError
         else:
             raise TypeError
+            
+    def get_pages(self):
+        return self._pages
 
-    def __str__(self):
-        return super().__str__() + f"Количество страниц: {self.pages}"
+    def set_pages(self, pages):
+        self._pages = pages
 
     def __repr__(self):
         return f"{self.__class__.__name__}(name={self._name!r}, " \
@@ -42,9 +57,12 @@ class AudioBook(Book):
         else:
             raise TypeError
 
-    def __str__(self):
-        return super().__str__() + f"Продолжительность: {self.duration}"
+    def get_duration(self):
+        return self._duration
 
+    def set_duration(self, duration):
+        self._duration = duration
+        
     def __repr__(self):
         return f"{self.__class__.__name__}(name={self._name!r}," \
                f" author={self._author!r}, " \
